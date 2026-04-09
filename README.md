@@ -26,9 +26,14 @@ Zie [mediastack/](mediastack/) voor Docker-configuratie en Prowlarr-setup.
 
 ---
 
-## AI Agenten
+## AI Agenten & Tools
 
 Zie [AGENTS.md](AGENTS.md).
 
 - **Dave** — Orchestrator, communiceert met Jamie in het Nederlands
 - **johnclaw** — Technische uitvoerder (Docker, code, bestanden)
+
+| Service | Functie | Link |
+|---|---|---|
+| Veritas Kanban | Taakoverzicht | [192.168.0.216:3001](http://192.168.0.216:3001) |
+| Veritas Kanban API | REST API | [192.168.0.216:3010](http://192.168.0.216:3010) |

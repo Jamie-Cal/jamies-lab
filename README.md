@@ -1,54 +1,40 @@
 # Jamie's Lab
 
-Raspberry Pi 5 home lab met een Docker mediastack en AI-agenten.
+Raspberry Pi 5 home lab — Docker mediastack + AI-agenten.
 
----
-
-## Stack
-
-| Service | Functie | Poort |
-|---|---|---|
-| Jellyfin | Media server | 8096 |
-| Radarr | Filmbeheer | 7878 |
-| Sonarr | Seriesbeheer | 8989 |
-| Lidarr | Muziekbeheer | 8686 |
-| Bazarr | Ondertitels | 6767 |
-| qBittorrent | Downloaden | 8080 |
-| Prowlarr | Indexer-beheer | 9696 |
-| Flaresolverr | Cloudflare bypass | 8191 |
-| Gluetun | VPN-gateway | — |
-| Nginx Proxy Manager | Reverse proxy | 81 (admin) |
-| Pi-hole | DNS / ad-blocking | 8053 |
-| Portainer | Container-beheer | 9000 |
-
-> `.local` hostnamen werken momenteel niet. Gebruik het directe IP van de Pi.
-
----
-
-## AI Agenten
-
-Zie [AGENTS.md](AGENTS.md) voor de volledige beschrijving.
-
-- **Dave** — Orchestrator, praat met Jamie in het Nederlands
-- **johnclaw** — Technische werker, voert Docker/code/bestandstaken uit
-
-Configuratiebestanden:
-- `SOUL.md` — identiteit en gedragsregels
-- `USER.md` — informatie over Jamie
-- `TOOLS.md` — lab-configuratie
-- `HEARTBEAT.md` — periodieke taakoverzicht
+> `.local` hostnamen werken momenteel niet. Gebruik IP `192.168.0.218` direct.
 
 ---
 
 ## Mediastack
 
-Zie [mediastack/](mediastack/) voor Docker-configuratie en Prowlarr-setup.
+| Service | Functie | Link |
+|---|---|---|
+| Jellyfin | Media server | [192.168.0.218:8096](http://192.168.0.218:8096) |
+| Radarr | Films | [192.168.0.218:7878](http://192.168.0.218:7878) |
+| Sonarr | Series | [192.168.0.218:8989](http://192.168.0.218:8989) |
+| Lidarr | Muziek | [192.168.0.218:8686](http://192.168.0.218:8686) |
+| Bazarr | Ondertitels | [192.168.0.218:6767](http://192.168.0.218:6767) |
+| qBittorrent | Downloaden | [192.168.0.218:8080](http://192.168.0.218:8080) |
+| Prowlarr | Indexers | [192.168.0.218:9696](http://192.168.0.218:9696) |
+| Flaresolverr | Cloudflare bypass | [192.168.0.218:8191](http://192.168.0.218:8191) |
+| Nginx Proxy Manager | Reverse proxy | [192.168.0.218:81](http://192.168.0.218:81) |
+| Pi-hole | DNS / ad-blocking | [192.168.0.218:8053](http://192.168.0.218:8053) |
+| Portainer | Container-beheer | [192.168.0.218:9000](http://192.168.0.218:9000) |
 
-**Prowlarr + Flaresolverr** — Flaresolverr is geconfigureerd als proxy om Telenet ISP-blokkades te omzeilen.
+Zie [mediastack/](mediastack/) voor Docker-configuratie en Prowlarr-setup.
 
 ---
 
-## Hardware
+## AI Agenten & Tools
 
-- Raspberry Pi 5
-- IP: `192.168.0.218`
+Zie [AGENTS.md](AGENTS.md).
+
+- **Dave** — Orchestrator, communiceert met Jamie in het Nederlands
+- **johnclaw** — Technische uitvoerder (Docker, code, bestanden)
+
+| Service | Functie | Link |
+|---|---|---|
+| OpenClaw Dashboard | Agent-beheer | [127.0.0.1:18789](http://127.0.0.1:18789) |
+| Veritas Kanban | Taakoverzicht | [192.168.0.218:3001](http://192.168.0.218:3001) |
+| Veritas Kanban API | REST API | [192.168.0.218:3010](http://192.168.0.218:3010) |

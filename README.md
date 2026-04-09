@@ -28,10 +28,14 @@ Zie [mediastack/](mediastack/) voor Docker-configuratie en Prowlarr-setup.
 
 ## AI Agenten & Tools
 
-Zie [AGENTS.md](AGENTS.md).
+Zie [AGENTS.md](AGENTS.md) voor details.
 
-- **Dave** — Orchestrator, communiceert met Jamie in het Nederlands
-- **johnclaw** — Technische uitvoerder (Docker, code, bestanden)
+| Agent | Model | Rol |
+|---|---|---|
+| **Dave** | Gemini 2.5 Flash | Orchestrator — projectmanagement, Nederlandse communicatie, Telegram |
+| **John** | Claude Sonnet 4.6 | Technische worker — code schrijven, Docker, bestandsoperaties |
+| **Chris** | GPT-5.4 | Generalist — nog niet geconfigureerd |
+| **Arthur** | Gemini 3.1 Pro | Generalist — nog niet geconfigureerd |
 
 | Service | Functie | Link |
 |---|---|---|
